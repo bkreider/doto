@@ -1,0 +1,2 @@
+class DOError(Exception):
+    pass

@@ -8,11 +8,11 @@ import requests
 
 class Droplet(d0mixin, object):
 
-    def __str__(self):
-        return ("Droplet:%s") % (self.id)
-
     def __repr__(self):
-        return ("Droplet:%s") % (self.id)
+
+        return "Droplet(id=%s, image=%s, name=%s, ip=%s, status=%s, mem=%s, disk=%s, regions=%s" % (self.id, self.image_id, self.name, self.ip_address, self.status, self.size_id, "NotImplemented", self.region_id)
+
+    __str__ = __repr__
 
     def __init__(self, **kwds):
         self.__dict__.update(kwds)
